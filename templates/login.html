@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>ログイン画面</h1>
+<form method="POST">
+    {% if correct == false %}
+    <div class="alert alert-warning" role="alert">
+        ユーザ名かパスワードが違います。
+    </div>
+    {% endif %}
+    <label for="">ユーザー名</label>
+    <input type="text" name="username">
+    <label for="">パスワード</label>
+    <input type="password" name="password">
+    <input type="submit" value="ログイン">
+</form>
+
+{% endblock %}
